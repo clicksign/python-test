@@ -8,7 +8,7 @@ Desenvolver um pequeno sistema de checkout e desconto em produtos.
 - Vendedor deve cadastrar categorias dos produtos
 - Usuário deve conseguir efetuar a compra de vários produtos
 
-***Regras de Negócio:***
+**Regras de Negócio:**
 
 - Checkout do produto:
 	- Desconto de 15% em produtos da categoria material escolar.
@@ -18,9 +18,10 @@ Desenvolver um pequeno sistema de checkout e desconto em produtos.
 		- Desconto de 7% no valor total dos produtos dessa categoria.
 	- Não existe desconto para as demais categorias.
 
-***OBS:***
+**OBS:**
 
-- Testes usando Pytest
+- Escrever testes
 - Usar Django Rest Framework
 - Boas práticas no desenvolvimento da API
 - Explicar no README como executar o projeto e as decisões técnicas
+- Realizar um fork deste repositório e abrir o PR ao finalizar
