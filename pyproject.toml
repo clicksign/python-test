@@ -1,0 +1,35 @@
+[tool.black]
+line-length = 110
+target-version = ["py38"]
+
+[tool.isort]
+line_length = 100
+multi_line_output = 3
+known_localfolder = ["clicksign_store", "orders", "products", "tests"]
+sections = ["FUTURE", "STDLIB", "THIRDPARTY", "LOCALFOLDER"]
+default_section = "THIRDPARTY"
+include_trailing_comma = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-vv --cov=orders --cov=products --cov-report=term-missing"
+
+[tool.poetry]
+name = "python-test"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Django = "^4.2.1"
+djangorestframework = "^3.14.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.3.1"
+pre-commit = "^3.3.2"
+pytest-cov = "^4.1.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
