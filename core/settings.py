@@ -29,6 +29,11 @@ DEBUG = config("DEBUG", default=False, cast=bool)
 
 ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="", cast=lambda v: [s.strip() for s in v.split(",")])
 
+# Admin User Credentials
+ADMIN_USERNAME = config("ADMIN_USERNAME", default="ademir", cast=str)
+ADMIN_EMAIL = config("ADMIN_EMAIL", default="ademir@admin.com", cast=str)
+ADMIN_PASSWORD = config("ADMIN_PASSWORD", default="çenh@1234", cast=str)
+
 
 # Application definition
 
