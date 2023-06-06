@@ -1,0 +1,72 @@
+[
+    {
+        "model": "categories.category",
+        "pk": 1,
+        "fields": {
+        "name": "Material escolar"
+        }
+    },
+    {
+        "model": "categories.category",
+        "pk": 2,
+        "fields": {
+        "name": "Eletrônicos"
+        }
+    },
+    {
+        "model": "categories.category",
+        "pk": 3,
+        "fields": {
+        "name": "Acessórios"
+        }
+    },
+    {
+        "model": "categories.category",
+        "pk": 4,
+        "fields": {
+        "name": "Construção"
+        }
+    },
+    {
+        "model": "categories.category",
+        "pk": 5,
+        "fields": {
+        "name": "Roupas"
+        }
+    },
+    {
+        "model": "categories.category",
+        "pk": 6,
+        "fields": {
+        "name": "Alimentos"
+        }
+    },
+    {
+        "model": "categories.category",
+        "pk": 7,
+        "fields": {
+        "name": "Móveis"
+        }
+    },
+    {
+        "model": "categories.category",
+        "pk": 8,
+        "fields": {
+        "name": "Beleza"
+        }
+    },
+    {
+        "model": "categories.category",
+        "pk": 9,
+        "fields": {
+        "name": "Esportes"
+        }
+    },
+    {
+        "model": "categories.category",
+        "pk": 10,
+        "fields": {
+        "name": "Brinquedos"
+        }
+    }
+]
