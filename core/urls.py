@@ -12,6 +12,9 @@ urlpatterns = [
 
     # Apps
     path('api/users/', include('apps.users.urls')),
+    path('api/categories/', include('apps.categories.urls')),
+    path('api/products/', include('apps.products.urls')),
+    path('api/orders/', include('apps.orders.urls')),
 
     # Django Admin
     path('admin/', admin.site.urls),
