@@ -29,6 +29,9 @@ DEBUG = config("DEBUG", default=False, cast=bool)
 
 ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="", cast=lambda v: [s.strip() for s in v.split(",")])
 
+# CORS
+CORS_ORIGIN_ALLOW_ALL = True
+
 # Admin User Credentials
 ADMIN_USERNAME = config("ADMIN_USERNAME", default="ademir", cast=str)
 ADMIN_EMAIL = config("ADMIN_EMAIL", default="ademir@admin.com", cast=str)
@@ -49,6 +52,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_spectacular',
     'django_filters',
+    'corsheaders',
 
     # Local Apps
     'apps.users.apps.UsersConfig',
