@@ -24,6 +24,7 @@ class OrderList(generics.ListCreateAPIView):
             queryset = queryset.filter(user=self.request.user)
         return queryset
 
+
 @extend_schema(tags=['Orders'])
 class OrderDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Order.objects.all()

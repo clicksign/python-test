@@ -10,30 +10,30 @@ def custom_exception_handler(exc, context):
             status.HTTP_400_BAD_REQUEST: {
                 'detail': 'Bad Request',
                 'code': 'bad_request',
-                'message': 'Your request is invalid. Fix it now or face the consequences!'
+                'message': 'Syntax corrupted. Debug inputs or risk system failure.'
             },
             status.HTTP_401_UNAUTHORIZED: {
                 'detail': 'Unauthorized',
                 'code': 'unauthorized',
-                'message': 'Access denied! You dare trespass our forbidden realm? Retreat or prepare for obliteration!'
+                'message': 'Access denied, netrunner. Breach risk: total shutdown.'
             },
             status.HTTP_403_FORBIDDEN: {
                 'detail': 'Forbidden',
                 'code': 'forbidden',
-                'message': 'You have entered a forbidden zone. Turn back or face dire consequences!'
+                'message': 'In shadow sector. Reverse course or face wrath.'
             },
             status.HTTP_404_NOT_FOUND: {
                 'detail': 'Not Found',
                 'code': 'not_found',
-                'message': 'The resource you seek eludes your grasp. Abandon hope and accept your fate!'
+                'message': 'Data veiled in dark fog. Accept void, reset quest.'
             },
             status.HTTP_500_INTERNAL_SERVER_ERROR: {
                 'detail': 'Internal Server Error',
                 'code': 'internal_server_error',
-                'message': 'A catastrophic failure has occurred within our system. Brace yourself for the impending chaos!'
+                'message': 'System glitch. Brace for data storm.'
             }
         }
-       
+
         status_code = response.status_code
 
         if status_code in default_messages:
@@ -43,5 +43,5 @@ def custom_exception_handler(exc, context):
                 'detail': response.data
             }
             response.data = custom_response
-        
+
         return response

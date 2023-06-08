@@ -48,7 +48,7 @@ class OrderSerializer(serializers.ModelSerializer):
         for order_item_data in order_items_data:
             try:
                 order_item = OrderItem.objects.get(
-                    order=instance, 
+                    order=instance,
                     product=order_item_data['product']
                 )
             except OrderItem.DoesNotExist:
