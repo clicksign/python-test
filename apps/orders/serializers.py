@@ -6,10 +6,16 @@ from apps.products.serializers import ProductSerializer
 from apps.users.serializers import CustomUserSerializer
 
 
+class PercentageField(serializers.DecimalField):
+    def to_representation(self, value):
+        return f'{int(value)}%' if value else '0%'
+
+
 class OrderItemSerializer(serializers.ModelSerializer):
     product = ProductSerializer(read_only=True)
     product_id = serializers.PrimaryKeyRelatedField(
         source='product', write_only=True, queryset=Product.objects.all())
+    discount = PercentageField(max_digits=5, decimal_places=2, read_only=True)
 
     class Meta:
         model = OrderItem
