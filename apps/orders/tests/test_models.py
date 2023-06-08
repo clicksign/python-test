@@ -87,7 +87,6 @@ class OrderModelTestCase(TestCase):
 
         self.recalculate_and_assert(product.price * 2)
 
-
     def test_category_protected_deletion(self):
         self.create_order(self.user)
         product = self.create_product("Product 1", Decimal("10.00"), self.other_category)
