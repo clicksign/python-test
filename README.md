@@ -63,7 +63,8 @@ Também são criados automaticamente alguns usuários de teste, produtos e categ
 - Para manter a consistência na formatação de código, adotei o autopep8.
 - Optei pelo PostgreSQL como banco de dados.
 - Segui o padrão de projeto do Django Rest Framework, que se baseia no padrão MVC, para estruturar nosso código.
-- Para facilitar a compreensão e rastreabilidade do histórico de commits, adotamos o gitmoji para padronizar nossas mensagens de commit.
+- Para facilitar a compreensão e rastreabilidade do histórico de commits, adotei o gitmoji para padronizar nossas mensagens de commit.
 - Para garantir a qualidade do código, escrevi testes unitários para as models e testes de integração para a API.
 - Para documentar a API, utilizei o Swagger, que é uma ferramenta de código aberto para documentar APIs RESTful.
+- Guniconrn foi utilizado como servidor WSGI HTTP para o Django.
 
