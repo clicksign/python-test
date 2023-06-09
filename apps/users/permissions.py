@@ -15,3 +15,32 @@ class IsSellerAdminOrReadOnly(permissions.BasePermission):
         if request.method in permissions.SAFE_METHODS:
             return True
         return request.user.user_group in [ADMIN_GROUP_ID, SELLER_GROUP_ID]
+
+
+class IsAdminOrSeller(permissions.BasePermission):
+    """
+    Admins and sellers can access unsafe methods on any order.
+    """
+    def has_permission(self, request, view):
+        if request.user.user_group in (ADMIN_GROUP_ID, SELLER_GROUP_ID):
+            return True
+        return False
+
+
+class IsOwnerOrReadOnly(permissions.BasePermission):
+    """
+    Admins and sellers can access unsafe methods on any order.
+    Clients can access unsafe methods only on their own orders.
+    """
+    def has_permission(self, request, view):
+        if request.user.user_group in (ADMIN_GROUP_ID, SELLER_GROUP_ID, CLIENT_GROUP_ID):
+            return True
+
+    def has_object_permission(self, request, view, obj):
+        self.message = 'Not found.'
+        if request.user.user_group in (ADMIN_GROUP_ID, SELLER_GROUP_ID):
+            return True
+
+        if request.user.user_group == CLIENT_GROUP_ID:
+            return obj.user == request.user
+        return False

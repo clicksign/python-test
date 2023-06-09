@@ -3,6 +3,7 @@ from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APIClient
 from rest_framework_simplejwt.tokens import AccessToken
+from apps.discounts.models import Discount
 from apps.products.models import Product, Category
 from apps.users.models import CustomUser
 
@@ -19,6 +20,13 @@ class OrderTests(TestCase):
 
         self.category_material = Category.objects.create(id=1, name='Material Escolar')
         self.category_construction = Category.objects.create(id=4, name='Construção')
+
+        self.create_discounts()
+
+    def create_discounts(self):
+        Discount.objects.create(category=self.category_material, mininum_quantity=1, discount=15)
+        Discount.objects.create(category=self.category_construction, mininum_quantity=3, discount=5)
+        Discount.objects.create(category=self.category_construction, mininum_quantity=5, discount=7)
 
     def create_product(self, name, price, category):
         return Product.objects.create(name=name, price=price, category=category)
