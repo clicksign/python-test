@@ -19,6 +19,11 @@ Criar arquivo .env:
 cp local.env .env
 ```
 
+Ativar env do poetry:
+```
+poetry shell
+```
+
 Executar migrações do projeto:
 
 ```
