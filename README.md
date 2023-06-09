@@ -42,7 +42,11 @@ O arquivo `.env` contém as variáveis de ambiente necessárias para executar o 
 - Executar o projeto:
 	- `docker-compose up -d --build`
 
-0s testes rodam automaticamente quando o container é criado.
+Os testes rodam automaticamente quando o container é criado.
+Mas caso queira rodá-los manualmente, execute o seguinte comando:
+	
+- `docker-compose run app bash -c "python manage.py test"`
+
 Também são criados automaticamente alguns usuários de teste, produtos e categorias.
 - Usuários:
 	- `admin` - `admin123`
