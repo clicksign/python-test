@@ -6,6 +6,3 @@ lint:
 
 test:
 	poetry run pytest -sx
-
-coverage:
-	poetry run coverage run -m pytest && poetry run coverage report -m

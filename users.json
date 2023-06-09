@@ -1,0 +1,78 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$JjzKuFlaFADTl56BldTitJ$9TLWVnpaZ5FB7JWuzSHOumdFvRL7YVDFylZTTmS7raY=",
+        "last_login": "2023-06-09T14:44:23.429Z",
+        "is_superuser": true,
+        "username": "superuser",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2023-06-09T14:43:24.360Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$pZCYf5tj7xJURP2mMjWlsS$q3zVmbbFjATFcinAUzxJvsUasQNZV+NXaW/no5NuVLY=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "buyer",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-06-09T14:46:00.301Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.userprofile",
+    "pk": 1,
+    "fields": {
+      "user": 2,
+      "name": "buyer",
+      "role": "buyer",
+      "phone_number": "1234567890",
+      "address": "123 street"
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$sD0Dupoh10F54mtbJsHjzz$+GVpoL1ZxIU2Dec/SFrtuffKTPN1hb0eB6/ON6o+ksU=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-06-09T14:46:51.871Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.userprofile",
+    "pk": 2,
+    "fields": {
+      "user": 3,
+      "name": "admin",
+      "role": "admin",
+      "phone_number": "1234567890",
+      "address": "123 street"
+    }
+}
+]
