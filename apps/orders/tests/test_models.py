@@ -2,6 +2,7 @@ from decimal import Decimal
 from django.db.models import ProtectedError
 from django.test import TestCase
 from django.contrib.auth import get_user_model
+from apps.discounts.models import Discount
 from apps.orders.models import Order, OrderItem
 from apps.products.models import Product, Category
 
@@ -15,6 +16,12 @@ class OrderModelTestCase(TestCase):
         self.construction_category = Category.objects.create(id=4, name="Construção")
         self.other_category = Category.objects.create(name="Outra Categoria")
         self.order = None
+        self.create_discounts()
+
+    def create_discounts(self):
+        Discount.objects.create(category=self.material_category, mininum_quantity=1, discount=15)
+        Discount.objects.create(category=self.construction_category, mininum_quantity=3, discount=5)
+        Discount.objects.create(category=self.construction_category, mininum_quantity=5, discount=7)
 
     def create_product(self, name, price, category):
         return Product.objects.create(name=name, price=price, category=category)
@@ -41,19 +48,22 @@ class OrderModelTestCase(TestCase):
         self.create_order(self.user)
         product = self.create_product("Product 1", Decimal("10.00"), self.material_category)
         self.create_order_item(product, 2)
-        self.recalculate_and_assert(Decimal("17.00"))
+        total_with_discount = product.price * 2 * Decimal(1 - 15/100)  # 15% discount
+        self.recalculate_and_assert(round(total_with_discount, 2))
 
     def test_recalculate_total_with_construction_category_discount_3_items(self):
         self.create_order(self.user)
         product = self.create_product("Product 1", Decimal("10.00"), self.construction_category)
         self.create_order_item(product, 3)
-        self.recalculate_and_assert(Decimal('28.50'))
+        total_with_discount = product.price * 3 * Decimal(1 - 5/100)  # 5% discount for 3 or more items
+        self.recalculate_and_assert(round(total_with_discount, 2))
 
     def test_recalculate_total_with_construction_category_discount_5_items(self):
         self.create_order(self.user)
         product = self.create_product("Product 1", Decimal("10.00"), self.construction_category)
         self.create_order_item(product, 5)
-        self.recalculate_and_assert(Decimal('46.50'))
+        total_with_discount = product.price * 5 * Decimal(1 - 7/100)  # 7% discount for 5 or more items
+        self.recalculate_and_assert(round(total_with_discount, 2))
 
     def test_recalculate_total_with_construction_category_discount_multiple_items(self):
         self.create_order(self.user)

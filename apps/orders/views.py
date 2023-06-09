@@ -1,8 +1,7 @@
 from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated
 from drf_spectacular.utils import extend_schema
-
-from apps.orders.permissions import IsOwnerOrReadOnly, CLIENT_GROUP_ID
+from apps.users.permissions import IsOwnerOrReadOnly, CLIENT_GROUP_ID
 from apps.orders.models import Order
 from apps.orders.serializers import OrderSerializer
 from apps.orders.filters import OrderFilter

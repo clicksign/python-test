@@ -42,7 +42,11 @@ O arquivo `.env` contém as variáveis de ambiente necessárias para executar o 
 - Executar o projeto:
 	- `docker-compose up -d --build`
 
-0s testes rodam automaticamente quando o container é criado.
+Os testes rodam automaticamente quando o container é criado.
+Mas caso queira rodá-los manualmente, execute o seguinte comando:
+	
+- `docker-compose run app bash -c "python manage.py test"`
+
 Também são criados automaticamente alguns usuários de teste, produtos e categorias.
 - Usuários:
 	- `admin` - `admin123`
@@ -53,6 +57,11 @@ Também são criados automaticamente alguns usuários de teste, produtos e categ
 - Documentação da API (Swagger):
 	- `http://localhost:8000`
 
+
+- Para se autenticar na API, é necessário enviar um POST para o endpoint `http://localhost:8000/api/token/` com o seguinte payload:
+	- `{"username": "...", "password": "..."}`
+	- O token de autenticação será retornado no campo `access`.
+	- Insira-o no campo `Authorize` do Swagger ou no header `Authorization` caso esteja utilizando outra ferramenta.
 
 
 

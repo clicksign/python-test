@@ -2,7 +2,7 @@ from django.conf import settings
 from django.db import models
 
 from apps.products.models import Product
-from apps.orders.services import DiscountService
+from apps.discounts.services import DiscountService
 
 
 class Order(models.Model):
