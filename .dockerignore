@@ -1,0 +1,5 @@
+# docker ignore for django
+__pycache__
+*.py[cod]
+
+venv

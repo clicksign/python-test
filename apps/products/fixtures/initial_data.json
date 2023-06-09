@@ -1,0 +1,183 @@
+[
+    {
+      "model": "products.product",
+      "pk": 1,
+      "fields": {
+        "name": "Lápis",
+        "price": "1.99",
+        "category": 1
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 2,
+      "fields": {
+        "name": "Caneta",
+        "price": "2.99",
+        "category": 1
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 3,
+      "fields": {
+        "name": "Camiseta",
+        "price": "19.99",
+        "category": 2
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 4,
+      "fields": {
+        "name": "Calça Jeans",
+        "price": "49.99",
+        "category": 2
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 5,
+      "fields": {
+        "name": "Copo",
+        "price": "9.99",
+        "category": 3
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 6,
+      "fields": {
+        "name": "Prato",
+        "price": "4.99",
+        "category": 3
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 7,
+      "fields": {
+        "name": "Furadeira",
+        "price": "199.99",
+        "category": 4
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 8,
+      "fields": {
+        "name": "Chave de Fenda",
+        "price": "5.99",
+        "category": 4
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 9,
+      "fields": {
+        "name": "Sabonete",
+        "price": "1.99",
+        "category": 5
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 10,
+      "fields": {
+        "name": "Xampu",
+        "price": "4.99",
+        "category": 5
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 11,
+      "fields": {
+        "name": "Fone de Ouvido",
+        "price": "29.99",
+        "category": 6
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 12,
+      "fields": {
+        "name": "Carregador Portátil",
+        "price": "19.99",
+        "category": 6
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 13,
+      "fields": {
+        "name": "Tênis",
+        "price": "79.99",
+        "category": 7
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 14,
+      "fields": {
+        "name": "Chinelo",
+        "price": "14.99",
+        "category": 7
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 15,
+      "fields": {
+        "name": "Café",
+        "price": "5.99",
+        "category": 8
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 16,
+      "fields": {
+        "name": "Leite",
+        "price": "3.99",
+        "category": 8
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 17,
+      "fields": {
+        "name": "Mesa",
+        "price": "99.99",
+        "category": 9
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 18,
+      "fields": {
+        "name": "Cadeira",
+        "price": "49.99",
+        "category": 9
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 19,
+      "fields": {
+        "name": "Bola de Futebol",
+        "price": "14.99",
+        "category": 10
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 20,
+      "fields": {
+        "name": "Raquete de Tênis",
+        "price": "29.99",
+        "category": 10
+      }
+    }
+  ]
+  

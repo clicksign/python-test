@@ -1,0 +1,29 @@
+[
+    {
+        "model": "discounts.discount",
+        "pk": 1,
+        "fields": {
+            "category": 1,
+            "mininum_quantity": 2,
+            "discount": 15
+        }
+    },
+    {
+        "model": "discounts.discount",
+        "pk": 2,
+        "fields": {
+            "category": 4,
+            "mininum_quantity": 3,
+            "discount": 5
+        }
+    },
+    {
+        "model": "discounts.discount",
+        "pk": 3,
+        "fields": {
+            "category": 4,
+            "mininum_quantity": 5,
+            "discount": 7
+        }
+    }
+]
