@@ -25,11 +25,9 @@ poetry shell
 ```
 
 Executar migrações do projeto:
-
 ```
 python manage.py makemigration
 ```
-
 ```
 python manage.py migrate
 ```
@@ -38,9 +36,13 @@ Para facilitar o uso da aplicação pode ser importado os users "admin" e "buyer
 ```
 python manage.py loaddata users
 ```
+```
 user:superuser password:superuser
+
 user:admin password:pass12345
+
 user:buyer password:pass12345
+```
 
 Executar a aplicação:
 ```
@@ -82,15 +84,15 @@ Buyer possui acesso de comprador, com possibilidade de recuperar produtos e cria
 Admin possui acesso total a API, como cadastrar produtos, outros usuário "admin" e atualizar/deletar registros.
 Mantido o banco de dados SQLite apenas para facilitar a execução do projeto.
 
-Para tratar os discontos por categoria, foram criados os modelos "Product", "Category" e "CategoryDiscount".
-Caso um produto pertença a uma categoria com "CategoryDiscount" registrado, ele estará qualificado para obter desconto, este modelo possui os campos "discount_percentage" e product_quantity".
+Para tratar os descontos por categoria, foram criados os modelos "Product", "Category" e "CategoryDiscount".
+Caso um produto pertença a uma categoria com "CategoryDiscount" registrado, ele estará qualificado para obter desconto, este modelo possui os campos "discount_percentage" e "product_quantity".
 No momento da compra será verificado as categorias pertecentes ao produto, filtrando assim a quantidade a ser adquirida com o campo "product_quantity", retornando o maior desconto válido para o produto.
 
 Modelos do projeto:
 
- Markup : - Product: Produtos a serem vendidos
-          - Category: Categorias de um produto
-		  - CategoryDiscount: Descontos de uma categoria por quantidade
-		  - Order: Pedidos realizados
-		  - OrderItems: Produtos de um pedido
-		  - UserProfile: Extensão do modelo User que armazena a permissão do usuário
+- Product: Produtos a serem vendidos
+- Category: Categorias de um produto
+- CategoryDiscount: Descontos de uma categoria por quantidade
+- Order: Pedidos realizados
+- OrderItems: Produtos de um pedido
+- UserProfile: Extensão do modelo User que armazena a permissão do usuário
