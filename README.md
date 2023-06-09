@@ -54,6 +54,11 @@ Também são criados automaticamente alguns usuários de teste, produtos e categ
 	- `http://localhost:8000`
 
 
+- Para se autenticar na API, é necessário enviar um POST para o endpoint `http://localhost:8000/api/token/` com o seguinte payload:
+	- `{"username": "...", "password": "..."}`
+	- O token de autenticação será retornado no campo `access`.
+	- Insira-o no campo `Authorize` do Swagger ou no header `Authorization` caso esteja utilizando outra ferramenta.
+
 
 
 ## Decisões técnicas
